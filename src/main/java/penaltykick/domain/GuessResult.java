@@ -38,6 +38,12 @@ public final class GuessResult {
   }
 
   public int getScore() {
-    return 1;
+    int score = 0;
+    for (final Boolean guessResult : guessResults) {
+      if (guessResult) {
+        score++;
+      }
+    }
+    return score;
   }
 }
